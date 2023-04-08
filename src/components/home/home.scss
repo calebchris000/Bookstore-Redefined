@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+
+$Montserrat: "Montserrat";
+$skyBlue: #0290ff;
+$darkerBlue: #4386bf;
+$RobotoSlab: "Roboto Slab";
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+.main {
+  background-color: #fafafa;
+  margin: 60px;
+  padding-bottom: 50px;
+}
+
+.holdLoading {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 10000;
+  align-items: center;
+  background-color: rgba(0, 12, 27, 0.747);
+}
+
+.loading {
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  border: 8px solid $darkerBlue;
+  border-top-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.book-empty {
+  text-align: center;
+  color: $skyBlue;
+}
+
+.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  margin: 0;
+  padding: 24px 60px;
+  grid-gap: 50px;
+  background-color: #fff;
+  border: 1px solid rgb(230, 230, 230);
+
+  .profile > * {
+    color: $skyBlue;
+    cursor: pointer;
+    font-size: 1.2rem;
+    align-self: center;
+
+    &:hover {
+      color: $darkerBlue;
+      transition: all 0.5s ease;
+      transform: scale(1.05);
+    }
+  }
+
+  .title {
+    font-family: $Montserrat;
+    color: $skyBlue;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .links {
+    display: flex;
+    flex-grow: 1;
+    grid-gap: 10px;
+  }
+
+  .links > * {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: $Montserrat;
+    font-size: 0.84rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+
+    &:last-child {
+      color: grey;
+    }
+  }
+}
+
+.bookElement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  margin: 50px;
+  background-color: #fff;
+
+  .bookTitle,
+  .author,
+  .category {
+    padding: 0;
+    margin: 0;
+  }
+
+  .category {
+    font-family: $Montserrat;
+    color: grey;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .bookTitle {
+    font-family: $RobotoSlab;
+    font-weight: 700;
+    font-size: 1.375rem;
+  }
+  .author {
+    font-family: $RobotoSlab;
+    color: $darkerBlue;
+    font-weight: 300;
+    font-size: 0.875rem;
+  }
+
+  .subSection1 {
+    button {
+      margin-top: 20px;
+      border: none;
+      border-right: 2px solid rgb(218, 218, 218);
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0.875rem;
+      color: $darkerBlue;
+      font-weight: 300;
+      padding: 0;
+      font-family: $RobotoSlab;
+      padding-right: 16px;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+    button:last-child {
+      border: none;
+    }
+  }
+
+  .subSection2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+
+    &:first-child {
+      width: 50px;
+      height: 50px;
+    }
+
+    .book-percent {
+      font-family: $Montserrat;
+      font-weight: 400;
+      font-size: 2rem;
+    }
+
+    .book-completed {
+      font-family: $Montserrat;
+      color: grey;
+    }
+  }
+  .subSection3 {
+    font-family: $RobotoSlab;
+
+    .current-chapter {
+      color: grey;
+      font-weight: 300;
+      font-size: 0.813rem;
+    }
+
+    .chapter-name {
+      font-weight: 300;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+    .update-progress {
+      padding: 8px 24px;
+      border: none;
+      background-color: $skyBlue;
+      cursor: pointer;
+      border-radius: 3px;
+      font-family: $RobotoSlab;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-top: 20px;
+    }
+  }
+}
+
+footer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 50px;
+
+  input,
+  select,
+  button {
+    padding: 12px;
+    font-size: 1rem;
+    font-family: $Montserrat;
+    border: 1px solid rgb(218, 218, 218);
+  }
+  input::placeholder {
+    color: rgb(179, 177, 177);
+  }
+  button {
+    background-color: $skyBlue;
+    color: #fff;
+    font-family: $RobotoSlab;
+    font-weight: 700;
+    border-radius: 3px;
+    // margin-left: auto;
+    font-size: 0.813rem;
+  }
+}
