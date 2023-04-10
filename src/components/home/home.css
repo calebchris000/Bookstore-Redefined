@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: #fafafa;
+  margin: 60px;
+  padding-bottom: 50px;
+}
+
+.book-empty {
+  text-align: center;
+  color: #0290ff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 24px 60px;
+  grid-gap: 50px;
+  background-color: #fff;
+  border: 1px solid rgb(230, 230, 230);
+}
+.navbar .profile > * {
+  color: #0290ff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  align-self: center;
+}
+.navbar .profile > *:hover {
+  color: #4386bf;
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+}
+.navbar .title {
+  font-family: "Montserrat";
+  color: #0290ff;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar .links {
+  display: flex;
+  flex-grow: 1;
+  grid-gap: 10px;
+}
+.navbar .links > * {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "Montserrat";
+  font-size: 0.84rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+.navbar .links > *:last-child {
+  color: grey;
+}
+
+.bookElement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  margin: 50px;
+  background-color: #fff;
+}
+.bookElement .bookTitle,
+.bookElement .author,
+.bookElement .category {
+  padding: 0;
+  margin: 0;
+}
+.bookElement .category {
+  font-family: "Montserrat";
+  color: grey;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.bookElement .bookTitle {
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+.bookElement .author {
+  font-family: "Roboto Slab";
+  color: #4386bf;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+.bookElement .subSection1 button {
+  margin-top: 20px;
+  border: none;
+  border-right: 2px solid rgb(218, 218, 218);
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 0.875rem;
+  color: #4386bf;
+  font-weight: 300;
+  padding: 0;
+  font-family: "Roboto Slab";
+  padding-right: 16px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.bookElement .subSection1 button:last-child {
+  border: none;
+}
+.bookElement .subSection2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.bookElement .subSection2:first-child {
+  width: 50px;
+  height: 50px;
+}
+.bookElement .subSection2 .book-percent {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 2rem;
+}
+.bookElement .subSection2 .book-completed {
+  font-family: "Montserrat";
+  color: grey;
+}
+.bookElement .subSection3 {
+  font-family: "Roboto Slab";
+}
+.bookElement .subSection3 .current-chapter {
+  color: grey;
+  font-weight: 300;
+  font-size: 0.813rem;
+}
+.bookElement .subSection3 .chapter-name {
+  font-weight: 300;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+.bookElement .subSection3 .update-progress {
+  padding: 8px 24px;
+  border: none;
+  background-color: #0290ff;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: "Roboto Slab";
+  color: #fff;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+footer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 50px;
+}
+footer input,
+footer select,
+footer button {
+  padding: 12px;
+  font-size: 1rem;
+  font-family: "Montserrat";
+  border: 1px solid rgb(218, 218, 218);
+}
+footer input::placeholder {
+  color: rgb(179, 177, 177);
+}
+footer button {
+  background-color: #0290ff;
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 0.813rem;
+}
+
+/*# sourceMappingURL=home.css.map */
